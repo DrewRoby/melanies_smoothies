@@ -7,8 +7,8 @@ st.title(":cup_with_straw: Reste Ye Pylgrimme! :cup_with_straw:")
 st.write("An Blended and Moste Frozen Concoction awaites. Beholde thy choyces:")
 
 smoothiefroot_response = requests.get("https://my.smoothiefroot.com/api/fruit/watermelon")
-# st.text(smoothiefroot_response.json())
-sf_df = st.dataframe(data=smoothiefroot_response.json(), use_container_width=True)
+st.text(smoothiefroot_response.json())
+st.dataframe(data=smoothiefroot_response.json(), use_container_width=True)
 
 cnx = st.connection('snowflake')
 session = cnx.session()
